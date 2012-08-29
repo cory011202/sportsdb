@@ -44,7 +44,7 @@ function populateTeamPlayers($sport,$teamId,$a){
     while ($player = mysql_fetch_array($getPlayers)){
         $i++;
         //code to alternate color and build the table
-        if($i % 2){//this divied $i by 2 and if there is a remainder
+        if($i % 2){//this divided $i by 2 and if there is a remainder
             echo "<tr bgcolor=\"#dbe5f1\" id=\"row" . $i . "\">\n";}
         else {//This means that $i divided by 2 is an even number
              echo "<tr bgcolor=\"#b8cce4\" id=\"row" . $i . "\">\n";
