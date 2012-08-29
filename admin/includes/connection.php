@@ -2,9 +2,11 @@
 //Database hostname
 $db_host = 'localhost';
 // your database username
-$db_user = 'hulettpu_statsdb';
+#$db_user = 'hulettpu_statsdb';
+$db_user = 'root';
 //your database password
-$db_pass = 'ImDewy41Stat$';
+#$db_pass = 'ImDewy41Stat$';
+$db_pass = 'FmintASS69';
 //database for which you wish to connect to
 $db_name = 'hulettpu_tssrstats';
 //the db connection
