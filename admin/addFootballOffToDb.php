@@ -87,7 +87,7 @@ $result = mysql_query($insertFootballGameInfoTbl)
     </tr><!--function to populate tbl headers-->
         <?php 
               populatePlayerTblHeaders("Tackle Solo,Tackle Asst,Tackle For Loss,Int,Int Yds,Int Td,Fumble Rec,Fumble Yds,Fumble Td");
-              populateTeamPlayers($aTeam,"9");     
+              populateTeamPlayers("football",$aTeam,"9");
         ?>
 </table>
 <table align="center" width="780 px" name="hDefData">
@@ -96,7 +96,7 @@ $result = mysql_query($insertFootballGameInfoTbl)
     </tr><!--function to populate tbl headers-->
         <?php 
               populatePlayerTblHeaders("Tackle Solo,Tackle Asst,Tackle For Loss,Int,Int Yds,Int Td,Fumble Rec,Fumble Yds,Fumble Td");
-              populateTeamPlayers($hTeam,"9");     
+              populateTeamPlayers("football",$hTeam,"9");
         ?>
         <tr>
             <td><INPUT type="submit" value="Submit" name="submit" /></td>

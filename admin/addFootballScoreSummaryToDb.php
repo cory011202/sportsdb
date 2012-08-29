@@ -41,19 +41,27 @@ foreach($_POST['summary'] as $key => $player){
 
 }
 ?>
-<div id="right_column">
-</div>
-<table id="" align="center" >
+    <div id="wrapper">
+    <div id="title">Game Entered!</div>
 
-    <tr>
-       <td>
-            Game successfully added! Choose an action to the left.
-       </td>
-    </tr>
-</table>
-<div>
-<?php
-//get html footer
-  require_once('includes/footer.php');
-?>
-</div>
+    <?php
+//get Left Column
+    require_once('includes/left_column.php');
+    ?>
+    <div id="right_column">
+        <table id="" align="center" >
+
+            <tr>
+               <td>
+                    Game successfully added! Choose an action to the left.
+               </td>
+            </tr>
+        </table>
+     </div>
+        <div>
+        <?php
+        //get html footer
+          require_once('includes/footer.php');
+        ?>
+        </div>
+    </div>

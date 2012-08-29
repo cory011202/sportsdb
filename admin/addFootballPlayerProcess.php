@@ -1,4 +1,4 @@
-<?
+<?php
 //pulls in the header with an include
     require_once('includes/header.php');
 //pulls in the functions
@@ -19,10 +19,7 @@
 		  (NULL, '$teamID', '$lName', '$fName','$gradYear') 
 		")//End Query
 	  or die(mysql_error());  
-//pulls in the header with java
-	require_once('includes/header.php');
-//pulls in the left column
-	require_once('includes/left_column.php');
+
 //Lets the user know the athelte was succesfully added
 echo "<br />" . $fName . " " . $lName . " was succesfully added to the database.<br />";
 //Code to give the option to add another athlete.

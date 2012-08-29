@@ -62,16 +62,18 @@ $lastGameRecordId = mysql_fetch_array($result);
     <tr><form method="post" action="addFootballOffToDb.php">
         <td align="center" colspan="14"><input type = "hidden" name="aTeam" value="<?php echo $aTeam;?>"><b>Away Team </b><?php setTeamName($aTeam);?></td>
     </tr><!--function to populate tbl headers-->
-        <?php populatePlayerTblHeaders("Rush Att,Rush Yds,Rush Td,Pass Att,Pass Comp,Pass Yds,Pass Td,Pass Int,Rec,Rec Yds,Rec Td");
-              populateTeamPlayers($aTeam,"11");     
+        <?php
+              populatePlayerTblHeaders("Rush Att,Rush Yds,Rush Td,Pass Att,Pass Comp,Pass Yds,Pass Td,Pass Int,Rec,Rec Yds,Rec Td");
+              populateTeamPlayers("football",$aTeam,"11");
         ?>
 </table>
 <table align="center" width="780 px" name="hOffData">
     <tr>
         <td align="center" colspan="14"><input type = "hidden" name="hTeam" value="<?php echo $hTeam;?>"><b>Home Team </b><?php setTeamName($hTeam);?></td>
     </tr><!--function to populate tbl headers-->
-        <?php populatePlayerTblHeaders("Rush Att,Rush Yds,Rush Td,Pass Att,Pass Comp,Pass Yds,Pass Td,Pass Int,Rec,Rec Yds,Rec Td");
-              populateTeamPlayers($hTeam,"11");     
+        <?php
+              populatePlayerTblHeaders("Rush Att,Rush Yds,Rush Td,Pass Att,Pass Comp,Pass Yds,Pass Td,Pass Int,Rec,Rec Yds,Rec Td");
+              populateTeamPlayers("football",$hTeam,"11");
         ?>
         <tr>
             <td><INPUT type="submit" value="Submit" name="submit" /></td>
