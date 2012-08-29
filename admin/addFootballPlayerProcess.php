@@ -1,4 +1,8 @@
 <?
+//pulls in the header with an include
+    require_once('includes/header.php');
+//pulls in the functions
+    require_once('includes/functions.php');
 //connect to the db
 	require_once('includes/connection.php');
 //Gets the athlete information from the Athlete page

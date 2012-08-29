@@ -3,7 +3,6 @@
 	require_once('includes/connection.php');
 //pulls in the header with an include
 	require_once('includes/header.php');
-
 //pulls in the functions
     require_once('includes/functions.php');
 ?>
