@@ -52,14 +52,24 @@ foreach($_POST['player'] as $key => $player){
     $kickRetYds = $_POST['stat5'][$key];
     
     $kickRetTd = $_POST['stat6'][$key];
+    //Create an array out of the stats that can be checked for null values
+    $statsArray = array($puntRetYds,
+                        $puntRetTd,
+                        $kickRet,
+                        $kickRetYds,
+                        $kickRetTd);
         
 //Query to insert data into footballGameInformation table of the database
-$insertFootballGameInfoTbl = "INSERT INTO footballKickPuntReturns(id,gameId,playerId,teamId,puntRet,puntRetyards,puntRetTd,kickRet,kickRetYards,                                                                        kickRetTd)
-                              VALUES (NULL,'$lastGameRecordId[0]','$playerId','$teamId','$puntRet','$puntRetYds','$puntRetTd','$kickRet','$kickRetYds'                                                                  ,'$kickRetTd')";
-                                                   
-//execute the query
-$result = mysql_query($insertFootballGameInfoTbl)
-          or die(mysql_error());
+$insertFootballGameInfoTbl = "INSERT INTO footballKickPuntReturns(id,gameId,playerId,teamId,puntRet,puntRetYards,puntRetTd,kickRet,kickRetYards,kickRetTd)
+                              VALUES (NULL,'$lastGameRecordId[0]','$playerId','$teamId','$puntRet','$puntRetYds','$puntRetTd','$kickRet','$kickRetYds','$kickRetTd')";
+
+    //if statement that checks the array for all keys to be null and if they are all null
+    //do not put the name in the database
+    if (array_filter($statsArray) != null){
+        //execute the query
+        $result = mysql_query($insertFootballGameInfoTbl)
+            or die(mysql_error());
+    }
 
 }
 ?>  
